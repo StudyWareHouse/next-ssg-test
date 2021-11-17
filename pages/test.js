@@ -1,26 +1,27 @@
 import Link from 'next/link';
-import axios from 'axios';
 import {
   useQuery,
-  useQueryClient,
-  QueryClient,
-  dehydrate
 } from 'react-query'
+import {fetchRandomPeople} from '../apis';
 
+const TEST_RANDOM_PEOPLE_KEY = 'test_random_people';
 function Test(props) {
-  const result = useQuery('todos', async () => await axios.get('https://randomuser.me/api/'), {
+  console.log(props);
+  const result = useQuery(TEST_RANDOM_PEOPLE_KEY, fetchRandomPeople, {
     refetchOnWindowFocus: false,
-    staleTime: 100,
+    // refetchOnMount: false, // 이런 형태면 문제 발생
     initialData: props.data
   });
-  console.log('Test');
+
   return (
     <section>
+      <div>
+        <Link href="/">
+            <a>/</a>
+        </Link>
+      </div>
+      <div>{JSON.stringify(result?.data?.data?.info?.seed)}</div>
       {JSON.stringify(result)}
-      <div>Test Machine</div>
-      <Link href="/">
-          <a>/</a>
-      </Link>
     </section>
   )
 }
@@ -29,7 +30,8 @@ Test.getInitialProps = async (context) => {
   if (typeof window === 'undefined') {
     return {}
   }
-  const response = await axios.get('https://randomuser.me/api/');
+
+  const response = await fetchRandomPeople();
 
   return {
     data: response.data

@@ -1,1 +1,9 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/_next/static/css/27d177a30947857b.css" as="style"/><link rel="stylesheet" href="/_next/static/css/27d177a30947857b.css" data-n-g=""/><link rel="preload" href="/_next/static/css/184a6c448a0a3052.css" as="style"/><link rel="stylesheet" href="/_next/static/css/184a6c448a0a3052.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-514908bffb652963.js" defer=""></script><script src="/_next/static/chunks/framework-6e4ba497ae0c8a3f.js" defer=""></script><script src="/_next/static/chunks/main-d3f8c9f19d92620b.js" defer=""></script><script src="/_next/static/chunks/pages/_app-389e11b57020e365.js" defer=""></script><script src="/_next/static/chunks/173-9d2dc3351ee5d16b.js" defer=""></script><script src="/_next/static/chunks/103-a50ffc23b36b5958.js" defer=""></script><script src="/_next/static/chunks/pages/index-06a5e431535115c3.js" defer=""></script><script src="/_next/static/j8987o6y3rCy7V1CS8GYW/_buildManifest.js" defer=""></script><script src="/_next/static/j8987o6y3rCy7V1CS8GYW/_ssgManifest.js" defer=""></script><script src="/_next/static/j8987o6y3rCy7V1CS8GYW/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><section><a href="/test">/test</a><div class="swiper"><div class="swiper-wrapper"><div class="swiper-slide">Slide 1</div><div class="swiper-slide">Slide 2</div><div class="swiper-slide">Slide 3</div><div class="swiper-slide">Slide 4</div></div></div></section></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"j8987o6y3rCy7V1CS8GYW","nextExport":true,"isFallback":false,"gip":true,"scriptLoader":[]}</script></body></html>
+# SSG TEST
+
+일단.. 굳이 NextJS 측에서 권하지 않는 것을 쓰는 것은 좋지 않긴 하다
+
+사용하려면 어느 순간의 deprecated는 각오해야할듯
+
+
+index 는 prefetch 적용
+

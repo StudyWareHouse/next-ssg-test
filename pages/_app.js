@@ -1,4 +1,3 @@
-import '../styles/globals.css';
 import React from 'react';
 import {
   QueryClient,
@@ -7,7 +6,7 @@ import {
   useIsFetching
 } from 'react-query'
 
-import Loading from '../components/Loading'
+import Loading from '../components/Loading';
 
 function MyApp({ Component, pageProps }) {
   const [queryClient] = React.useState(() => new QueryClient());
@@ -15,7 +14,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <Loading />
         <Component {...pageProps} />
       </Hydrate>
     </QueryClientProvider>
